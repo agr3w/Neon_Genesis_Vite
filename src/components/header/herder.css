@@ -1,0 +1,18 @@
+.header {
+    background-color: white !important;
+}
+
+.logo {
+    width: 100px;
+}
+
+.op1 {
+    color: black;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
