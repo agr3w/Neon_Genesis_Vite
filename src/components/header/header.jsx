@@ -1,24 +1,36 @@
 import { AppBar, Button, Toolbar, Typography } from "@mui/material";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import "./herder.css";
 import logo from "../../assets/logo.png";
 
 const Header = () => {
   return (
-    <AppBar position="fixed" className="nav">
-      <Toolbar>
-        <img src={logo} alt="NEON GENESIS" className="nav-logo-img" />
+    <AppBar position="fixed" className="nav" color="transparent">
+      <Toolbar className="toolbar">
+        {/* Logo e título alinhados à esquerda */}
+        <div className="nav-left">
+          <img src={logo} alt="NEON GENESIS" className="nav-logo-img" />
+          <Typography variant="h6" className="nav-titulo">
+            Neon Genesis
+          </Typography>
+        </div>
 
-        <Typography variant="h6" className="nav-titulo">
-          Neon Genesis
-        </Typography>
+        {/* Botões centralizados */}
+        <div className="nav-center">
+          <Typography className="nav-itens-btn">
+            <a href="/teste">Totens Prontos</a>
+          </Typography>
+          <Typography className="nav-itens-btn">
+            <a href="/teste">Orçamento</a>
+          </Typography>
+          <Typography className="nav-itens-btn">
+            <a href="/teste">Suporte</a>
+          </Typography>
+        </div>
 
-        <div className="nav-itens">
-          <Button className="nav-itens-btn">Suporte</Button>
-          <Button className="nav-itens-btn">compra</Button>
-          <Button className="nav-itens-btn">teste</Button>
-          <span className="nav-itens-iconCart">
-            
-          </span>
+        {/* Carrinho ou outros ícones à direita */}
+        <div className="nav-right">
+          <ShoppingCartIcon className="nav-itens-iconCart" />
         </div>
       </Toolbar>
     </AppBar>
